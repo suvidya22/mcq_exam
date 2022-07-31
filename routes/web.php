@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ExamController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,5 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::group(['prefix' => 'students', 'as' => 'students.'], function () {
+    Route::post('save', [StudentController::class, 'save'])->name('save');
+});
+
+Route::group(['prefix' => 'exams', 'as' => 'exams.'], function () {
+    Route::get('get-exam', [ExamController::class, 'getExam'])->name('get-exam');
+});
+
+
