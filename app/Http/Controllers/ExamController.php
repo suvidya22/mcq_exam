@@ -19,7 +19,6 @@ class ExamController extends Controller
     }
     public function getExam()
     {
-        // $questions = $this->question->with('options')->all();
 
         $questions = Question::with('options')->get(); //Get all questions
 
@@ -28,10 +27,10 @@ class ExamController extends Controller
     public function acceptExam()
     {
         $questions = $this->question->with('options')->get();
+        $score = 8;
         return view('rightAnswers', [
             'questions' => $questions,
+            'score' => $score,
         ]);
-        // print_r($question);
-        // dd();
     }
 }

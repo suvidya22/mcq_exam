@@ -25,7 +25,7 @@
                             <div class="radio">
                                 <label>
                                     @foreach ($question->options as $opt_key => $option)
-                                        <input type="radio" value="{{ $option->option_id }}"
+                                        <input type="radio" required="required" value="{{ $option->option_id }}"
                                             name="{{ $question->question_id }}"> {{ $option->option }} &nbsp; &nbsp;
                                     @endforeach
                                 </label>

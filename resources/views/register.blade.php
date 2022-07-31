@@ -7,7 +7,7 @@
     </div><br>
     <div class="form-group">
         <label>Mobile number</label>
-        <input type="number" name="mobile_number" class="form-control p_input" required="required">
+        <input type="number"  name="mobile_number" class="form-control p_input" required="required">
     </div>
     <br>
     <div class="text-center">

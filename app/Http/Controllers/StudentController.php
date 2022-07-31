@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
-
+use Illuminate\Support\Facades\Validator;
 class StudentController extends Controller
 {
     public function register()
@@ -15,10 +15,10 @@ class StudentController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'mobile_number' => 'required',
+            'mobile_number' => 'required'
         ]);
 
-        $user = Student::create([
+        $student = Student::create([
             'name' => $request->input('name'),
             'mobile_number' => $request->input('mobile_number'),
         ]);
