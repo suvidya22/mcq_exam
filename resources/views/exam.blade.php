@@ -2,7 +2,7 @@
 <hr>
 
 <form method="POST" action="{{ route('exams.accept') }}" class="">
-    
+    <input type="hidden" name = "studDetails" value="{{$id}}">
     @foreach ($questions ?? '' as $key => $question)
         <div class="row input_row">
             <div class="col-md-12">

@@ -3,7 +3,22 @@
         <h3>Test Result</h3>
     </div>
     <div class="title_right">
-        <div class="col-md-5 col-sm-5   form-group pull-right top_search">
+        <div class="form-group pull-right top_search">
+        </div>
+    </div>
+
+    <div style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+        <div class="row input_row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <a href="{{ route('exams.view-results') }}" class="btn btn-default">View all results</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <a href="{{ '/' }}" class="btn btn-default"> Home</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -12,7 +27,7 @@
     <div class="col-md-12 col-sm-12  ">
         <div class="x_panel">
             <div class="x_title">
-                <h2>Your Score : {{$score}}/10</h2>
+                <h2>Your Score : {{ $score }}/10</h2>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -39,4 +54,5 @@
             </div>
         </div>
     </div>
+
 </div>

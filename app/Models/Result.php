@@ -11,10 +11,13 @@ class Result extends Model
     protected $primaryKey = 'result_id';
 
     protected $fillable = [
-        'result_id',
         'student_id',
         'result',
     ];
+
+    public function students() {
+        return $this->hasOne(Student::class,'student_id','student_id');
+    }
 
     public function getEncryptedIdAttribute()
     {

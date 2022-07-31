@@ -21,31 +21,25 @@
             height: 100vh;
             margin: 0;
         }
-
         .full-height {
             height: 100vh;
         }
-
         .flex-center {
             align-items: center;
             display: flex;
             justify-content: center;
         }
-
         .position-ref {
             position: relative;
         }
-
         .top-right {
             position: absolute;
             right: 10px;
             top: 18px;
         }
-
         .content {
             text-align: center;
         }
-
         .title {
             font-size: 84px;
         }
@@ -66,22 +60,15 @@
 
 <body>
     <div class="flex-center position-ref full-height">
-
         <div class="top-right links">
-            <a href="">Dashboard</a>
             <a href="{{ route('students.register') }}">Register</a>
+            <a href="{{ route('exams.view-results') }}">View Results</a>
         </div>
 
         <div class="content">
             <div class="title m-b-md">
             </div>
-
-            <h2>Welcome to Laravel Quiz</h2>
-
-            @auth
-                <a href="">Dashboard</a>
-            @else
-            @endauth
+            <h2>Welcome to Laravel Quiz!</h2>
         </div>
     </div>
 </body>

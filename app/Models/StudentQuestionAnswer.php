@@ -11,7 +11,6 @@ class StudentQuestionAnswer extends Model
     protected $primaryKey = 'student_question_answer_id';
 
     protected $fillable = [
-        'student_question_answer_id',
         'student_id',
         'question_id',
         'option_id',

@@ -25,8 +25,9 @@ class StudentController extends Controller
         session()->flash('message', 'You have registered successfully!');
         return redirect()->route('exams.get-exam');
     }
+    
     public function getExam()
     {
         return view('exam');
-    } 
+    }
 }
