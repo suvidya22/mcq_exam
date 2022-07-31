@@ -26,6 +26,7 @@ Route::group(['prefix' => 'students', 'as' => 'students.'], function () {
 
 Route::group(['prefix' => 'exams', 'as' => 'exams.'], function () {
     Route::get('get-exam', [ExamController::class, 'getExam'])->name('get-exam');
+    Route::post('accept', [ExamController::class, 'acceptExam'])->name('accept');
 });
 
 

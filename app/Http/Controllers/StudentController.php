@@ -22,9 +22,7 @@ class StudentController extends Controller
             'name' => $request->input('name'),
             'mobile_number' => $request->input('mobile_number'),
         ]);
-
         session()->flash('message', 'You have registered successfully!');
-
         return redirect()->route('exams.get-exam');
     }
     public function getExam()

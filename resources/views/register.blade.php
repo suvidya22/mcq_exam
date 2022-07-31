@@ -12,6 +12,7 @@
     <br>
     <div class="text-center">
         <button type="submit" class="btn btn-primary btn-block enter-btn">Register</button>
+        <a href="{{('/')}}" class="btn btn-default">Cancel</a>
     </div>
 
 </form>

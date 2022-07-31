@@ -1,8 +1,8 @@
 <h2><strong>Questions</strong></h2>
 <hr>
 
-<form method="POST" action="" class="">
-
+<form method="POST" action="{{ route('exams.accept') }}" class="">
+    
     @foreach ($questions ?? '' as $key => $question)
         <div class="row input_row">
             <div class="col-md-12">
@@ -50,7 +50,7 @@
                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-2">
                     {{ csrf_field() }}
                     <button type="submit" class="btn btn-success">Submit</button> &nbsp;
-                    <a href="}" class="btn btn-default">Cancel</a>
+                    <a href="{{('/')}}" class="btn btn-default">Cancel</a>
                 </div>
             </div>
         </div>
