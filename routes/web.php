@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'students', 'as' => 'students.'], function () {
+    Route::get('register', [StudentController::class, 'register'])->name('register');
     Route::post('save', [StudentController::class, 'save'])->name('save');
 });
 

@@ -9,7 +9,7 @@ class StudentController extends Controller
 {
     public function register()
     {
-
+        return view('register');
     }
     public function save(Request $request)
     {
