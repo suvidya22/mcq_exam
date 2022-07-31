@@ -7,7 +7,7 @@
         <div class="row input_row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label class="control-label col-md-2 col-sm-2 col-xs-12">Questions {{ $key + 1 }}</label>
+                    <label class="control-label col-md-2 col-sm-2 col-xs-12">Question {{ $key + 1 }}</label>
                     <div class="col-md-10 col-sm-10 col-xs-10">
                         {{ $question->question }}
                     </div>
@@ -18,11 +18,7 @@
             <div class="col-md-12">
                 <div class='form-group'>
                     <label class="control-label col-md-2 col-sm-2 col-xs-12">
-                        @if ($question->type == 'answer')
-                            Answer
-                        @else
-                            Option
-                        @endif
+                            Options
                     </label>
                     <div class="col-md-10 col-sm-10 col-xs-12">
                         @if ($question->type == '')
